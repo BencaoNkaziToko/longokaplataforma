@@ -1,15 +1,15 @@
 const mysql = require('mysql')
-const databaseName = 'dblongoka'
-const userName = 'root'
-const hostName = 'localhost'
+const databaseName = 'bekl6qvpd2luujkhs01y'
+const userName = 'ucqngic5mahmxqdn'
+const hostName = 'bekl6qvpd2luujkhs01y-mysql.services.clever-cloud.com'
 const dialectName = 'mysql'
-const password = ''
+const password = 'QkFylsq5gPhzihPgn6Bf'
 
 //conexão com a base de dados
-const servidor = "localhost";
-const user = "root";
-const nomedb = "dblongoka"
-const senha = ""
+const servidor = "bekl6qvpd2luujkhs01y-mysql.services.clever-cloud.com";
+const user = "ucqngic5mahmxqdn";
+const nomedb = "bekl6qvpd2luujkhs01y"
+const senha = "QkFylsq5gPhzihPgn6Bf"
 const connection = mysql.createConnection({   
     host: servidor,
     user: user,
