@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets2/images/favicon.png">
+    <title>Adm Longoka / Bibliografias</title>
+    <!-- This page plugin CSS -->
+    <!-- <link href="../assets2/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../assets2/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../assets2/extra-libs/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+    
+   
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+   <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-lg">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-lg-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <a href="#">
+                            <img src="../assets/img/09.png" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <a class="topbartoggler d-block d-lg-none waves-effect waves-light" href="javascript:void(0)"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i></a>
+                </div>
+               <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav float-left me-auto ms-3 ps-1">
+                        <!-- Notification -->
+                        <li class="nav-item dropdown">
+                            <a class="d-none nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
+                                id="bell" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span><i data-feather="bell" class="svg-icon"></i></span>
+                                <span class="badge text-bg-primary notify-no rounded-circle">5</span>
+                            </a>
+                            
+                        </li>
+                       
+                    </ul>
+                    <ul class="navbar-nav float-end">
+                       <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="../assets2/images/users/user-286.png" alt="user" class="rounded-circle"
+                                    width="40">
+                                <span class="ms-2 d-none d-lg-inline-block"><span></span> <span
+                                        class="text-dark">longokaangola@gmail.com</span> <i data-feather="chevron-down"
+                                        class="svg-icon"></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-right user-dd animated flipInY">
+                                <a class="dropdown-item" href="/logoutAdm"><i data-feather="log-out"
+                                        class="svg-icon me-2 ms-1"></i>
+                                    Sair</a>
+                                <div class="dropdown-divider"></div>
+                               
+                        </li>
+                       
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/admHome"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Menu</span></a></li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu"></span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link" href="/instit"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">Instituições
+                                </span></a>
+                        </li>
+                        
+                        <li class="list-divider"></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="book" class="feather-icon"></i><span
+                                    class="hide-menu">Bibliografias</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="/adm_biblioteca" class="sidebar-link"><span
+                                            class="hide-menu"> Gerir Bibliografias
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="/categorias" class="sidebar-link"><span
+                                            class="hide-menu"> Gerir Categoria
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Autenticação</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/logoutAdm"
+                                aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
+                                    class="hide-menu">Sair
+                                </span></a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                               <!-- Botão para abrir o modal -->
+                                <a href="#" class="btn btn-primary" onclick="abrirModalCadastro()">Adicionar Instituição 
+                                    <i data-feather="plus" class="feather-icon"></i>
+                                </a>   
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table border table-striped table-bordered text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>Titulo</th>
+                                                <th>Autor</th>
+                                                <th>Categoria</th>
+                                                <th>Acção</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% livros.forEach((livro) =>  { %>
+                                                <tr>
+                                                    <td><%=livro.titulo %></td>
+                                                    <td><%=livro.autor %></td>
+                                                    <td><%=livro.nome %></td>
+                                                    <td>
+                                                        
+                                                        <a href="#" onclick="confirmarExclusao('<%=livro.idMaterial %>')" class="text-danger">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <a href="/adm_edit_livro/<%=livro.idMaterial %>"><i class="text-warning fas fa-edit"></i></a>
+                                                        <span class="mr-4"></span>
+                                                    </td>
+                                                </tr>
+                                            <% }) %>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Titulo</th>
+                                                <th>Autor</th>
+                                                <th>Categoria</th>
+                                                <th>Acção</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div id="confirmModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar Exclusão</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza de que deseja eliminar esta obra?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="confirmarBtn">Sim, Eliminar</button>
+                    <button type="button" class="btn btn-secondary" onclick="fecharModal()">Não</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modalCadastro" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="width: 600px;">
+            <div class="modal-content">
+                <form action="/adm_add_livro" method="post" enctype="multipart/form-data" id="uploadForm">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-dark text-center">Cadastrar nova Obra</h5>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Campos do Formulário -->
+                        <div class="form-group mb-2">
+                            <label for="titulo">Título</label>
+                            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Insira o título da obra" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="autor">Autor(es)</label>
+                            <input type="text" class="form-control" id="autor" name="autor" placeholder="Insira o(s) autores da obra" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="tipo">Categoria</label>
+                            <select class="form-control" id="categoria" name="categoria" required>
+                                <% categorias.forEach((categoria) => { %>
+                                    <option value="<%=categoria.id %>"><%=categoria.nome %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="sigla_acronomo">Bibliografia</label>
+                            <input class="form-control" type="file" id="userFile" name="userFile" placeholder="Carregue o ficheiro da Bibliografia"> 
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="button" class="btn btn-secondary" onclick="fecharModalCadastro()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Scripts -->
+    <script>
+        // Função para abrir o modal
+        function abrirModalCadastro() {
+            const modal = document.getElementById('modalCadastro');
+            modal.style.display = 'flex';
+        }
+    
+        // Função para fechar o modal
+        function fecharModalCadastro() {
+            const modal = document.getElementById('modalCadastro');
+            modal.style.display = 'none';
+        }
+    </script>
+
+    <script>
+        // Abrir o modal e definir a ação do botão de confirmação
+        function confirmarExclusao(id) {
+            const modal = document.getElementById('confirmModal');
+            const confirmarBtn = document.getElementById('confirmarBtn');
+    
+            // Configurar o botão de confirmação
+            confirmarBtn.onclick = function () {
+                window.location.href = `/adm_elim_livro/${id}`;
+            };
+    
+            // Exibir o modal
+            modal.style.display = 'block';
+        }
+    
+        // Fechar o modal
+        function fecharModal() {
+            const modal = document.getElementById('confirmModal');
+            modal.style.display = 'none';
+        }
+    
+        // Estilização do modal (apenas para demonstração básica)
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('confirmModal');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            modal.style.display = 'none';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+        });
+    </script>
+
+    <script src="../assets2/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets2/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../assets2/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="../dist/js/app-style-switcher.js"></script>
+    <script src="../dist/js/feather.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../assets2/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../assets2/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <!-- themejs -->
+    <!--Menu sidebar -->
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+    <!--This page plugins -->
+    <script src="../assets2/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets2/extra-libs/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    <script src="../dist/js/pages/datatable/datatable-basic.init.js"></script>
+</body>
+
+</html> 

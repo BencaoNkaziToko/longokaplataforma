@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets2/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets2/images/favicon.png">
+    <title>Adm Longoka / Editar cursos</title>
+    <!-- This page plugin CSS -->
+    <!-- <link href="../assets2/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../assets2/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="/assets2/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    
+    <link rel="stylesheet" href="../assets2/extra-libs/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="/assets2/extra-libs/datatables.net-bs4/css/responsive.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+    <link href="/dist/css/style.min.css" rel="stylesheet">   
+   
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+   <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-lg">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-lg-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <a href="#">
+                            <img src="../assets/img/09.png" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <a class="topbartoggler d-block d-lg-none waves-effect waves-light" href="javascript:void(0)"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i></a>
+                </div>
+               <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav float-left me-auto ms-3 ps-1">
+                        <!-- Notification -->
+                        <li class="nav-item dropdown">
+                            <a class="d-none nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
+                                id="bell" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span><i data-feather="bell" class="svg-icon"></i></span>
+                                <span class="badge text-bg-primary notify-no rounded-circle">5</span>
+                            </a>
+                            
+                        </li>
+                       
+                    </ul>
+                    <ul class="navbar-nav float-end">
+                       <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="../assets2/images/users/user-286.png" alt="user" class="rounded-circle"
+                                    width="40">
+                                <span class="ms-2 d-none d-lg-inline-block"><span></span> <span
+                                        class="text-dark">longokaangola@gmail.com</span> <i data-feather="chevron-down"
+                                        class="svg-icon"></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-right user-dd animated flipInY">
+                                <a class="dropdown-item" href="/logoutAdm"><i data-feather="log-out"
+                                        class="svg-icon me-2 ms-1"></i>
+                                    Sair</a>
+                                <div class="dropdown-divider"></div>
+                               
+                        </li>
+                       
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/admHome"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Menu</span></a></li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu"></span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link" href="/instit"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">Instituições
+                                </span></a>
+                        </li>
+                        
+                        
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Autenticação</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/logoutAdm"
+                                aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
+                                    class="hide-menu">Sair
+                                </span></a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                               <!-- Botão para abrir o modal -->
+                                <form action="/admUpdateCurso" method="POST">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-dark text-center">Editar dados do curso</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Campos do Formulário -->
+                                        <div class="form-group mb-2">
+                                            <input type="text" class="form-control d-none" id="idCurso" name="idCurso" value="<%=instituicao[0].idCurso %>">
+                                            <input type="text" name="idInstituicao" class="d-none" value="<%= instituicao[0].idInstituicao %>">
+                                            <label for="nomeInstituicao">Nome</label>
+                                            <input type="text" class="form-control" name="curso" value="<%=instituicao[0].nome %>" required>
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <label for="sigla_acronomo">Duração</label>
+                                            <input type="text" class="form-control" name="duracao" value="<%=instituicao[0].duracao %>" required>
+                                        </div>
+                                        <div class="modal-footer mb-3">
+                                            <button type="submit" class="form-control btn btn-warning">Editar dados</button>
+                                        </div>
+                                </form>
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-dark text-center">Editar Grade curricular do curso</h5>
+                                </div>
+                                <form method="POST" action="/admUpdateCurso_grade" enctype="multipart/form-data">
+                                        <div class="form-group mb-2">
+                                            <input type="text" class="form-control d-none" id="idCurso" name="idCurso" value="<%=instituicao[0].idCurso %>">
+                                            <input type="text" class="form-control d-none" id="idInstituicao" name="idInstituicao" value="<%=instituicao[0].idInstituicao %>">
+                                    
+                                            <label for="sigla_acronomo">Grade Curricular</label>
+                                            <input class="form-control" type="file" id="userFile" name="userFile" placeholder="Carregue o ficheiro da grade Curricular"> 
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="form-control btn btn-warning">Editar Grade</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+
+    <script src="../assets2/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/assets2/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets2/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/assets2/libs/popper.js/dist/umd/popper.min.js"></script>
+    
+    <script src="../assets2/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets2/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- apps -->
+    <script src="../dist/js/app-style-switcher.js"></script>
+    <script src="/dist/js/app-style-switcher.js"></script>
+    
+    <script src="../dist/js/feather.min.js"></script>
+    <script src="/dist/js/feather.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    
+    <script src="../assets2/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/assets2/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    
+    <script src="../assets2/extra-libs/sparkline/sparkline.js"></script>
+    <script src="/assets2/extra-libs/sparkline/sparkline.js"></script>
+    
+    <!--Menu sidebar -->
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <script src="/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+    <script src="/dist/js/custom.min.js"></script>
+    <!--This page plugins -->
+    <script src="../assets2/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/assets2/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    
+    <script src="../assets2/extra-libs/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    <script src="/assets2/extra-libs/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+    
+    <script src="../dist/js/pages/datatable/datatable-basic.init.js"></script>
+    <script src="/dist/js/pages/datatable/datatable-basic.init.js"></script>
+</body>
+
+</html>

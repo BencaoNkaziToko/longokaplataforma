@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Longoka / Pesquisa</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+    <!-- Favicons -->
+    <link href="assets/img/09.png" rel="icon">
+    <link href="assets/img/09.png" rel="apple-touch-icon">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="assets/css/variables-purple.css" rel="stylesheet"> 
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="#" class="align-items-center">
+        <img src="assets/img/10superior.png" class="img-fluid" alt="" width="140px" height="50px">
+      </a>
+
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class=""><a href="/mukalassi_ensino_superior"><span>Inicio</span> <i class="bi bi-home "></i></a>
+          <li><a class="nav-link scrollto active" href="/pesquisa" style="color: rgba(104, 73, 229, 0.905);font-weight: bold;">Pesquisar</a></li>
+          <li><a class="nav-link scrollto" href="/orientacao">Orientação Vocacional</a></li>
+          <li><a class="nav-link scrollto" href="/livros">Biblioteca</a></li>
+          <li><a class="nav-link scrollto"  href="uploads/Estatutos/Regime-Jurídico-mesclado.pdf" download="Regime-Jurídico-Legal-ISP.pdf">Estatudo Legal</a></li>
+         
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav>
+    </div>
+  </header>
+
+ 
+
+  <main id="main">
+    <section id="onfocus" class="onfocus">
+      <div class="container-fluid p-0">
+
+        <div class="row g-0" style="margin-top: 90px;">
+          <div class="col-lg-6 video-play position-relative">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox"></a>
+          </div>
+          <div class="col-lg-6">
+            <div class="content d-flex flex-column justify-content-center h-100">
+              <h3>Pesquisar por Instituições de Ensino Superior em Angola</h3>
+              
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Faça uma pesquisa simples, escrevendo apenas o nome ou sigla da instituição</li>
+                <li><i class="bi bi-check-circle"></i> Faça um pesquisa completa: Pesquisa por curso, natureza da instituição e província</li>
+                <li><i class="bi bi-check-circle"></i> Observe algumas estatísticas que o poderão ajudar a escolher sua futura instiuição ou futuro curso</li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End On Focus Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <ul class="nav nav-tabs row gy-4 d-flex">
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class="bi bi-search color-cyan"></i>
+              <h4>Pesquisa por</h4>
+              <h4>Nome ou Sigla</h4>
+            </a>
+          </li><!-- End Tab 1 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <i class="bi bi-zoom-in text-center color-indigo"></i>
+              
+              <h4>Pesquisa por</h4>
+              <h4>Curso</h4>
+              <h4>Provincia</h4>
+              <h4>Tipo</h4>
+            </a>
+          </li><!-- End Tab 2 Nav -->
+
+         
+
+         
+
+          
+
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+               
+              </div>
+              <section id="contact" class="contact">
+                
+                <div class="container">
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                          <div class="col-md-6 col-lg-8 form-group">
+                            <input type="text" name="name" class="form-control" id="name search-box" placeholder="Nome da instituição ou sigla/acronomo...." onkeyup="sendData(this)">
+                          </div>
+                        </div>
+                      </form>
+                   <div class="row gy-5 gx-lg-5">
+                    <div class="col-lg-8">
+                      <div class="info">
+                        <div class="container" style="max-height: 200px; overflow: auto">
+                              <table class="table align-items-center table-hover">
+                                <thead id="tbodyResults"></thead>
+                                <tbody id="searchResults"></tbody>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+            </div>
+          </div><!-- End Tab Content 1 -->
+
+          <div class="tab-pane" id="tab-2">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+                
+              </div>
+              <section id="contact" class="contact">
+                <div class="container">
+          
+                  
+          
+                </div>
+          
+                <div class="container">
+          
+                  <div class="row gy-5 gx-lg-5">
+          
+                    <div class="col-lg-8">
+                      <form method="get" action="#" id="dadosForm" class="php-email-form">
+                        <div class="form-group">
+                        <div class="row">
+                          <div class="col-4 form-group">
+                            <input type="text" name="nomeCurso" id="nomeCurso" class="searchText form-control" placeholder="Nome do curso..." autocomplete="on">
+                          </div>
+                         
+                          <div class="col-4 form-group mt-3 mt-md-0">
+                            <select class="form-control" name="tipo" id="tipo">
+                                <option value="vazio">Natureza da instituição</option>
+                                <option value="vazio">Todas</option>
+                                <option value="Pública">Públicas</option>
+                                <option value="Privada">Privadas</option>
+                          </select>
+                          </div>
+                        </div>
+                        <div class="form-group col-8">
+                          <select class="form-control" name="provincia" id="provincia">
+                                <option value="vazio">Selecionar província</option>
+                                <option value="vazio">Todas</option>
+                                <% provincias.forEach(function(provincias) { %>
+                                  <option value="<%=provincias.nomeProvincia %>"><%=provincias.nomeProvincia %></option>
+                                <% }) %>
+                          </select>
+                          <div class="text-center col-12"><button type="submit" class="mt-2 col-12">Pesquisar</button></div>
+                        </div>
+                        <div class="col-8 mt-3 d-none mb-2 mt-md-0 align-items-center">
+                            <div class="text-center col-12"><button type="submit">Pesquisar</button></div>
+                        </div>
+                        
+                        
+                      </form>
+                      <div class="row gy-5 gx-lg-5">
+                        <div class="col-lg-12">
+                          <div class="info">
+                            <div class="container" style="max-height: 200px; overflow: auto">
+                                  <table class="table table-hover" id="resultsTable">
+
+                                  </table>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div><!-- End Contact Form -->
+          
+                  </div>
+          
+                </div>
+              </section>
+              
+            </div>
+          </div>
+
+          <div class="tab-pane" id="tab-3">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+                
+               
+                
+              </div>
+              
+            </div>
+          </div><!-- End Tab Content 3 -->
+
+          <div class="tab-pane" id="tab-4">
+            <div class="row gy-4">
+                <div class="row gy-4">
+                    <div class="col-lg-8 order-2 order-lg-1">
+                      
+                    
+                    </div>
+                    
+                   
+                  </div>
+            </div>
+          </div><!-- End Tab Content 4 -->
+
+          <div class="tab-pane" id="tab-5">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">      
+              </div>
+              <div class="col-lg-4 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-5.svg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content 5 -->
+
+
+          <div class="tab-pane" id="tab-6">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+                
+                
+              </div>
+              
+            </div>
+          </div><!-- End Tab Content 6 -->
+
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+   
+   
+
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div class="copyright">
+            
+          </div>
+         
+        </div>
+
+      </div>
+    </div> 
+
+  </footer><!-- End Footer -->
+
+  
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script>
+
+            
+    function sendData(e){
+        const tbodyResults = document.getElementById('tbodyResults');
+        const searchResults = document.getElementById('searchResults');
+        const cabecalhoTb1 = document.getElementById('cabecalhoTb1')
+        //const headerTb = document.getElementById('headerTb')
+
+        const total = document.getAnimations('total')
+        var ver = e.value
+        if(ver == ''){
+            searchResults.innerText = ``;
+            //headerTb.innerHTML = ``;
+        }else{
+            //let contHeader = 0
+
+            fetch('getFruits', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({payload: e.value})
+            }).then(res => res.json()).then(data => {
+                let payload = data.payload;
+                searchResults.innerHTML = ``;
+                if(payload.length < 1){
+                    searchResults.innerHTML = '<td class="h4 text-center text-danger">Nenhuma instituição encontrada!</td>';
+                    return;
+                }
+                else{
+                    let c = 0
+                    
+                    payload.forEach(element => {
+                        
+                                searchResults.innerHTML += `
+                                <td><a href='/verPerfil/${element.idInstituicao}'>${element.nomeInstituicao}</a></td>
+                                <td><a href='/verPerfil/${element.idInstituicao}'>${element.sigla_acronomo}</a></td>
+                                <td><a href='/verPerfil/${element.idInstituicao}'>${element.tipo}</a></td>
+                                <td><a href='/verPerfil/${element.endereco}'>${element.nomeProvincia}</a></td>
+                                <td><a href='/verPerfil/${element.idInstituicao}'><i class='mdi mdi-launch'></i>ver</a></td>
+                            `;
+                            
+                    });
+                    return;
+                }
+            })
+        }
+        
+        
+    }
+    
+</script>
+
+
+
+<script>
+const form = document.getElementById('dadosForm');
+const resultsTable = document.getElementById('resultsTable');
+
+form.addEventListener('submit', async (e) => {
+e.preventDefault();
+const formData = new FormData(form);
+const nomeCurso = formData.get('nomeCurso');
+const provincia = formData.get('provincia');
+const tipo = formData.get('tipo');
+resultsTable.innerHTML = '';
+
+try {
+    const response = await fetch(`/buscarDados?nomeCurso=${nomeCurso}&provincia=${provincia}&tipo=${tipo}`);
+    const data = await response.json();
+    
+    // Limpa a tabela antes de adicionar os novos resultados
+    resultsTable.innerHTML = '';
+
+    if (data.data.length > 0) {
+    const tableHeaders = Object.keys(data.data[0]);
+    data.data.forEach(element => {
+        resultsTable.innerHTML += `
+            <td><a href='/verPerfil/${element.idInstituicao}'>${element.nomeInstituicao}</a></td>
+            <td><a href='/verPerfil/${element.idInstituicao}'>${element.sigla_acronomo}</a></td>
+            <td><a href='/verPerfil/${element.idInstituicao}'>${element.tipo}</a></td>
+            <td><a href='/verPerfil/${element.idInstituicao}'>${element.endereco}</a></td>
+            <td><a href='/verPerfil/${element.idInstituicao}'><i class='mdi mdi-launch'></i>ver</a></td>
+        `;
+    });
+    } else {
+        resultsTable.innerHTML = '<tr><td colspan="5" class="h4 text-center text-danger">Nenhuma instituição encontrada!</td></tr>';
+    }
+} catch (error) {
+    console.error('Erro ao buscar dados:', error);
+}
+});
+</script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

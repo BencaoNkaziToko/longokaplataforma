@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/09.png">
+    <title>Autenticar-se</title>
+   <link href="../dist/css/style.min.css" rel="stylesheet">
+  
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
+            </div>
+        </div>
+        
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
+            style="background:url(../assets/img/09.png) no-repeat center center;">
+            <div class="auth-box row">
+                </div>
+                <div class="col-lg-5 col-md-7 bg-white">
+                    <div class="p-3">
+                        <div class="text-center">
+                            <img src="../assets/img/10.png" alt="wrapkit">
+                        </div>
+                        <h2 class="mt-3 text-center">Autenticar-se</h2>
+                        <form class="mt-4" method="post" action="/admAuth">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label text-dark" for="">Nome de utilizador</label>
+                                        <input class="form-control" id="user" type="text"
+                                            placeholder="Inserir seu nome de utilizador" name="user" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label text-dark" for="">Palavra-Passe</label>
+                                        <input class="form-control" id="password" type="password"
+                                            placeholder="Inserir sua Palavra-Passe" name="password" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit" class="btn w-100 btn-dark">Entrar</button>
+                                </div>
+                                <div class="col-lg-12 text-center h1 mt-5">
+                                    <% if(mensagem){  %> 
+                                        <div class="text-danger h1">
+                                            <h4 class="">Dados incorrectos!</h4>
+                                        </div>
+                                    <% } %> 
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script src="../assets2/libs/jquery/dist/jquery.min.js "></script>
+    <script src="../assets2/libs/popper.js/dist/umd/popper.min.js "></script>
+    <script src="../assets2/libs/bootstrap/dist/js/bootstrap.min.js "></script>
+    
+    <script>
+        $(".preloader ").fadeOut();
+    </script>
+</body>
+
+</html>

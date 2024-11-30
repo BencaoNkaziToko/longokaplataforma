@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/09.png">
+    <title>Admin Longoka / Painel inicial</title>
+    <!-- Custom CSS -->
+    <link href="../assets2/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="../assets2/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="../assets2/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+   
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+   <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-lg">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-lg-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <a href="#">
+                            <img src="../assets/img/09.png" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <a class="topbartoggler d-block d-lg-none waves-effect waves-light" href="javascript:void(0)"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i></a>
+                </div>
+               <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav float-left me-auto ms-3 ps-1">
+                        <!-- Notification -->
+                        <li class="nav-item dropdown">
+                            <a class="d-none nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
+                                id="bell" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span><i data-feather="bell" class="svg-icon"></i></span>
+                                <span class="badge text-bg-primary notify-no rounded-circle">5</span>
+                            </a>
+                            
+                        </li>
+                       
+                    </ul>
+                    <ul class="navbar-nav float-end">
+                       <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="../assets2/images/users/user-286.png" alt="user" class="rounded-circle"
+                                    width="40">
+                                <span class="ms-2 d-none d-lg-inline-block"><span></span> <span
+                                        class="text-dark">longokaangola@gmail.com</span> <i data-feather="chevron-down"
+                                        class="svg-icon"></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-right user-dd animated flipInY">
+                                <a class="dropdown-item" href="/logoutAdm"><i data-feather="log-out"
+                                        class="svg-icon me-2 ms-1"></i>
+                                    Sair</a>
+                                <div class="dropdown-divider"></div>
+                               
+                        </li>
+                       
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/admHome"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Menu</span></a></li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu"></span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link" href="/instit"
+                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                    class="hide-menu">Instituições
+                                </span></a>
+                        </li>
+                        
+                        <li class="list-divider"></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="book" class="feather-icon"></i><span
+                                    class="hide-menu">Bibliografias</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="adm_biblioteca" class="sidebar-link"><span
+                                            class="hide-menu"> Gerir Bibliografias
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="/categorias" class="sidebar-link"><span
+                                            class="hide-menu"> Gerir Categoria
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Autenticação</span></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/logoutAdm"
+                                aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
+                                    class="hide-menu">Sair
+                                </span></a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <div class="page-wrapper" style="background-image: url('../assets/img/uuu-removebg-preview.png');background-repeat: no-repeat;background-size: contain; background-position: center;">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-7 align-self-center">
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1"></h3>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item"><a href="index.html"></a>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-5 align-self-center">
+                        <div class="customize-input float-end d-none">
+                            <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
+                                <option selected></option>
+                                <option value="1"></option>
+                                <option value="2"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <!-- *************************************************************** -->
+                <!-- Start First Cards -->
+                <!-- ********************************  quantidade_privadas quantidade_publicas  *  ****************************** -->
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card border-end">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="d-inline-flex align-items-center">
+                                            <h2 class="text-dark mb-1 font-weight-medium"><%= publicas[0].quantidade_publicas %></h2>
+                                            <span
+                                                class="badge bg-primary font-12 text-white font-weight-medium rounded-pill ms-2 d-lg-block d-md-none">Públicas</span>
+                                        </div>
+                                        <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Total de Instituições
+                                        </h6>
+                                    </div>
+                                    <div class="ms-auto mt-md-3 mt-lg-0">
+                                        <span class="opacity-7 text-muted"><i data-feather="globe"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card border-end ">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="d-inline-flex align-items-center">
+                                            <h2 class="text-dark mb-1 font-weight-medium"><%= privadas[0].quantidade_privadas %></h2>
+                                            <span
+                                                class="badge bg-cyan font-12 text-white font-weight-medium rounded-pill ms-2 d-lg-block d-md-none">Privadas</span>
+                                        </div>
+                                        <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Total de Instituições
+                                        </h6>
+                                    </div>
+                                    <div class="ms-auto mt-md-3 mt-lg-0">
+                                        <span class="opacity-7 text-muted"><i data-feather="globe"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card border-end ">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="d-inline-flex align-items-center">
+                                            <h2 class="text-dark mb-1 font-weight-medium"><%= bibliografias[0].quantidade_bibliografias %></h2>
+                                            <span
+                                                class="badge bg-danger font-12 text-white font-weight-medium rounded-pill ms-2 d-md-none d-lg-block">Acervo</span>
+                                        </div>
+                                        <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Total de Livros
+                                        </h6>
+                                    </div>
+                                    <div class="ms-auto mt-md-3 mt-lg-0">
+                                        <span class="opacity-7 text-muted"><i data-feather="book-open"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets2/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets2/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../dist/js/app-style-switcher.js"></script>
+    <script src="../dist/js/feather.min.js"></script>
+    <script src="../assets2/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <script src="../dist/js/custom.min.js"></script>
+    <script src="../assets2/extra-libs/c3/d3.min.js"></script>
+    <script src="../assets2/extra-libs/c3/c3.min.js"></script>
+    <script src="../assets2/libs/chartist/dist/chartist.min.js"></script>
+    <script src="../assets2/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="../assets2/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="../assets2/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longoka / Orientação Vocacional</title>
+      <!-- Favicons -->
+    <link href="assets/img/09.png" rel="icon">
+    <link href="assets/img/09.png" rel="apple-touch-icon">
+
+    <style>
+        /* Estilos globais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            padding-top: 60px; /* Espaço para o navbar fixo */
+            background-image: url('assets/img/Vetor-1-1.png');
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: absolute;
+        }
+
+        /* Navbar fixa no topo */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 5px;
+            box-shadow: 0 4px 6px rgba(255, 254, 255, 0.1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav img {
+            height: 40px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: rgb(123, 122, 125);
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            color: #8066e9;
+        }
+
+        /* Estilo para o container */
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+            margin-top: 80px; /* Aumento para garantir que o conteúdo não sobreponha o navbar */
+            text-align: center;
+        }
+
+       
+        /* Card de Resultados - Centralizado */
+        #result-section {
+            display: none;
+            position: relative;
+            z-index: 10;
+            max-width: 500px;
+            width: 80%;
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        /* Estilo para a recomendação de cursos */
+        #result-section ul {
+            padding-left: 20px;
+        }
+
+        #result-section ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Aumentar o tamanho das letras no questionário */
+        #question-section {
+            font-size: 18px;
+        }
+
+        /* Alinhar corretamente os botões de rádio */
+        .radio-group {
+            display: inline-flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        input[type="radio"] {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            vertical-align: middle; /* Alinha os radio buttons com o texto */
+        }
+
+        /* Aumentando o tamanho das letras nos botões de rádio */
+        label {
+            font-size: 20px;
+            vertical-align: middle; /* Alinha o texto com o botão de rádio */
+        }
+
+        /* Aumentando o tamanho do texto nas perguntas */
+        #question-text {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar com logo e links -->
+    <nav>
+        <img src="assets/img/10superior.png" alt="Logotipo"> <!-- Substitua com seu logotipo -->
+        <ul>
+            <li class=""><a href="/mukalassi_ensino_superior"><span>Inicio</span></a>
+            <li class=""><a href="/pesquisa"><span>Pesquisar</span></a></li>
+            <li><a class="" href="/orientacao" style="color: rgba(104, 73, 229, 0.905);font-weight: bold;">Orientação Vocacional</a></li>
+            <li><a class="" href="/livros">Biblioteca</a></li>
+            <li><a class="nav-link scrollto"  href="uploads/Estatutos/Regime-Jurídico-mesclado.pdf" download="Regime-Jurídico-Legal-ISP.pdf">Estatudo Legal</a></li>
+         
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Teste Vocacional</h1>
+        <div id="question-section">
+            <p id="question-text">Carregando pergunta...</p>
+            <div id="answers"></div>
+            <a href="/">Cancelar</a>
+        </div>
+
+        <div id="result-section">
+            <h2>Resultados</h2>
+            <p id="recommendation"></p>
+            <ul id="course-list"></ul>
+            <a href="">Repetir Teste</a>
+        </div>
+    </div>
+
+    <script>
+        // Definindo áreas de interesse com cursos universitários recomendados
+        const areas = {
+            "Tecnologia": [
+                "Ciência da Computação",
+                "Engenharia de Computação",
+                "Engenharia Informática",
+                "Engenharia Elétrica",
+                "Tecnologias de Informação e Comunicação"
+            ],
+            "Saúde": [
+                "Medicina",
+                "Medicina Dentária",
+                "Enfermagem",
+                "Fisioterapia",
+                "Nutrição"
+            ],
+            "Humanas": [
+                "Psicologia (Clínica e Organizacional)",
+                "Sociologia",
+                "Antropologia",
+                "Comunicação Social",
+                "Serviço Social"
+            ],
+            "Negócios": [
+                "Gestão de Empresas",
+                "Gestão de Recursos Humanos",
+                "Administração",
+                "Economia",
+                "Marketing"
+            ],
+            "Ciências Exatas": [
+                "Matemática",
+                "Física",
+                "Engenharia Civil",
+                "Engenharia Química",
+                "Química"
+            ],
+            "Ciências Naturais": [
+                "Biologia",
+                "Bioquímica",
+                "Geografia",
+                "Geologia",
+                "Agronomia"
+            ]
+        };
+
+        // Perguntas ajustadas para refletir interesses mais profundos
+        const questions = [
+            { text: "Você gosta de trabalhar com computadores, resolver problemas tecnológicos e aprender novas linguagens de programação?", area: "Tecnologia" },
+            { text: "Você se interessa por desenvolver novos sistemas e trabalhar em soluções inovadoras para a sociedade?", area: "Tecnologia" },
+            { text: "Você tem interesse em aprender sobre segurança cibernética e inteligência artificial?", area: "Tecnologia" },
+
+            { text: "Você gosta de trabalhar diretamente com pessoas e tem interesse em melhorar a saúde e bem-estar delas?", area: "Saúde" },
+            { text: "Você tem aptidão para lidar com situações de estresse, como em hospitais ou clínicas?", area: "Saúde" },
+            { text: "Você gosta de ajudar pessoas a se recuperarem de doenças e melhorar sua qualidade de vida?", area: "Saúde" },
+
+            { text: "Você tem interesse em estudar comportamentos humanos e suas relações dentro de diferentes culturas?", area: "Humanas" },
+            { text: "Você gostaria de analisar o comportamento humano e trabalhar com políticas sociais?", area: "Humanas" },
+            { text: "Você sente prazer em debater sobre questões sociais e culturais com diferentes grupos?", area: "Humanas" },
+
+            { text: "Você se sente motivado por desafios empresariais e estratégias de crescimento?", area: "Negócios" },
+            { text: "Você tem habilidades para liderar equipes e tomar decisões empresariais?", area: "Negócios" },
+            { text: "Você tem interesse em aprender sobre a dinâmica do mercado e administração de recursos?", area: "Negócios" },
+
+            { text: "Você tem afinidade com números e gosta de resolver problemas matemáticos complexos?", area: "Ciências Exatas" },
+            { text: "Você gosta de entender como o mundo físico funciona e realizar experimentos?", area: "Ciências Exatas" },
+            { text: "Você se interessa por entender e aplicar conceitos em áreas como física e química?", area: "Ciências Exatas" },
+
+            { text: "Você se interessa por estudar a natureza e os seres vivos?", area: "Ciências Naturais" },
+            { text: "Você tem interesse por como o meio ambiente afeta os seres humanos e outras espécies?", area: "Ciências Naturais" },
+            { text: "Você se vê trabalhando em áreas como conservação ambiental e biotecnologia?", area: "Ciências Naturais" }
+        ];
+
+        // Função para começar o teste
+        let currentQuestion = 0;
+        const answers = { "Tecnologia": 0, "Saúde": 0, "Humanas": 0, "Negócios": 0, "Ciências Exatas": 0, "Ciências Naturais": 0 };
+
+        function displayQuestion() {
+            if (currentQuestion < questions.length) {
+                const question = questions[currentQuestion];
+                document.getElementById('question-text').innerText = question.text;
+                document.getElementById('answers').innerHTML = `
+                    <div class="radio-group">
+                        <input type="radio" name="answer" value="sim" id="sim" onclick="nextQuestion()">
+                        <label for="sim">Sim</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" name="answer" value="nao" id="nao" onclick="nextQuestion()">
+                        <label for="nao">Não</label>
+                    </div>
+                `;
+            }
+        }
+
+        // Função para passar para a próxima pergunta
+        function nextQuestion() {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                const answer = selectedAnswer.value;
+                const question = questions[currentQuestion];
+                if (answer === "sim") {
+                    answers[question.area]++;
+                }
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    displayQuestion();
+                } else {
+                    showResults();
+                }
+            }
+        }
+
+        // Função para exibir os resultados
+        function showResults() {
+            document.getElementById('question-section').style.display = 'none';
+            document.getElementById('result-section').style.display = 'block';
+
+            let maxScore = 0;
+            let bestArea = "";
+            for (let area in answers) {
+                if (answers[area] > maxScore) {
+                    maxScore = answers[area];
+                    bestArea = area;
+                }
+            }
+
+            document.getElementById('recommendation').innerText = `Sua área mais recomendada é: ${bestArea}`;
+            const courseList = document.getElementById('course-list');
+            areas[bestArea].forEach(course => {
+                const li = document.createElement('li');
+                li.textContent = course;
+                courseList.appendChild(li);
+            });
+        }
+
+        // Função para reiniciar o teste
+        function restartTest() {
+            currentQuestion = 0;
+            for (let area in answers) {
+                answers[area] = 0;
+            }
+            document.getElementById('question-section').style.display = 'block';
+            document.getElementById('result-section').style.display = 'none';
+            displayQuestion();
+        }
+
+        // Função para cancelar o teste
+        function cancelTest() {
+            if (confirm("Tem certeza de que deseja cancelar o teste?")) {
+                document.getElementById('question-section').style.display = 'none';
+                document.getElementById('result-section').style.display = 'none';
+            }
+        }
+
+        // Inicializar o teste
+        window.onload = function() {
+            displayQuestion();
+        };
+    </script>
+</body>
+</html>

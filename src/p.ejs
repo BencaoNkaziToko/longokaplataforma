@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Perfil</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="../assets/css/variables-purple.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="#" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <p>E.Superior</p>
+        <h3>L🎓ngoka</h3>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class=""><a href="/mukalassi_ensino_superior"><span>Home</span> <i class="bi bi-home "></i></a>
+          <li class=""><a href="/"><span>Menu</span> <i class="bi bi-home "></i></a>
+          <li class=""><a href="/pesquisa"><span>Pesquisar</span> <i class="bi bi-home "></i></a></li>
+          <li><a class="nav-link scrollto" href="/livros">Biblioteca</a></li>
+          <li><a class="nav-link scrollto" href="https://longoka-orientacao-vocacional.onrender.com">Orientação Vocacional</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero carousel  carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row justify-content-center gy-6">
+          <div class="col-lg-5 col-md-8">
+            
+          </div>
+          
+
+          <div class="mt-4 col-lg-9 text-center">
+            <h2><%=instituicao[0].nomeInstituicao %> - <%= instituicao[0].sigla_acronomo %> </h2>
+          </div>
+
+        </div>  
+      </div>
+    </div><!-- End Carousel Item -->
+  
+  <main id="main">
+        <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+
+        <ul class="nav nav-tabs row gy-4 d-flex">
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-4">
+              <i class="bi bi-map color-red"></i>
+              <h4>Dados da</h4>
+              <h4>Instituição</h4>
+            </a>
+          </li><!-- End Tab 4 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class="bi bi-book text-center color-indigo"></i>
+              
+              <h4>Cursos</h4>
+              <h4>Disponiveis</h4>
+              
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane " id="tab-1">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+               
+              </div>
+                <!-- ======= Pricing Section ======= -->
+      <section id="pricing" class="pricing" style="max-height: 400px; overflow: auto">
+        <div class="container" data-aos="fade-up">
+          <div class="row gy-2" style="max-height: 700px; max-width: 700px; overflow: auto">
+            <table class="table text-primary table-responsive table-hover" >
+              <thead class="bg-dark">
+                  <th>NOME</th>
+                  <th>DURAÇÃO</th>
+                  <th>GRADE CURRICULAR</th>
+              </thead>
+              <tbody>
+                <% let verifica ="vazio" %>
+                <% instituicao.forEach((inst)=> { %>              
+                <% verifica = inst.gradeCurricular %>
+                    <tr>
+                        <td><%=inst.nome %></td>
+                        <td><%=inst.duracao %> ANOS</td>
+                        <td>
+                            <% if(verifica === "null") { %>
+                              <P style="color: red;">Indisponivel</P>
+                            <% } else { %>
+                              <a href="../uploads/<%=inst.gradeCurricular %>" download="<%=instituicao[0].nomeInstituicao %>_<%=instituicao[0].nome %>.pdf" class="">Baixar grade</a>
+                            <% } %> 
+                        </td>
+                    </tr>
+                  <% }) %>    
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+          </div><!-- End Tab Content 1 -->
+
+          <div class="tab-pane" id="tab-2">
+            <div class="row gy-4">
+              <div class="col-lg-8 order-2 order-lg-1">
+                
+              </div>
+              <section id="contact" class="contact">
+                <div class="container">
+                </div>
+                <div class="container">
+          
+                  <div class="row gy-5 gx-lg-5">
+          
+                    
+          
+                    <div class="col-lg-8">
+                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="form-group">
+                        <div class="row">
+                          <div class="col-4 form-group">
+                            <input type="text" name="nomeCurso" list="nomeCurso" class="searchText form-control" placeholder="Nome do curso..." autocomplete="on">
+                          </div>
+                         
+                          <div class="col-4 form-group mt-3 mt-md-0">
+                            <select class="form-control" name="provincia" id="">
+                                <option value="">Publica</option>
+                                <option value="">Privada</option>
+                          </select>
+                          </div>
+                        </div>
+                        <div class="form-group col-8">
+                          <select class="form-control" name="provincia" id="">
+                                <option value="">Luanda</option>
+                                <option value="">Cabinda</option>
+                                <option value="">Bengo</option>
+                          </select>
+                         
+                        </div>
+                        <div class="col-8 mt-3 mb-2 mt-md-0 align-items-center">
+                            <div class="text-center col-12"><button type="submit">Pesquisar</button></div>
+                        </div>
+                        
+                        
+                      </form>
+                      <div class="row gy-5 gx-lg-5">
+                        <div class="col-lg-12">
+                          <div class="info">
+                            <div class="container" style="max-height: 400px; overflow: auto">
+                                <table class="table table-hover table-responsive">
+                                    <tr>
+                                        <td class="">universidade Kimpavita</td>
+                                        <td class="">UNIKIVI</td>
+                                        <td class="">Uige</td>
+                                        <td class="">Publica</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="">universidade Kimpavita</td>
+                                        <td class="">UNIKIVI</td>
+                                        <td class="">Uige</td>
+                                        <td class="">Publica</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td class="">universidade Kimpavita</td>
+                                        <td class="">UNIKIVI</td>
+                                        <td class="">Uige</td>
+                                        <td class="">Publica</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3></h3>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div><!-- End Contact Form -->
+          
+                  </div>
+          
+                </div>
+              </section>
+              
+            </div>
+          </div><!-- End Tab Content 2 -->
+
+          
+
+          <div class="tab-pane active" id="tab-4">
+            <div class="row gy-4">
+                <div class="row gy-4">
+                    <div class="col-lg-8 order-2 order-lg-1">
+                      <h3>Descrição</h3>
+                      <p>
+                        <%=instituicao[0].nomeInstituicao %> - <%= instituicao[0].sigla_acronomo %>
+                      </p>
+                      <p class="fst-italic">
+                          Instituição <%=instituicao[0].tipo %>
+                      </p>
+                      <ul>
+                        <li><i class="bi bi-map"></i>Endereço: <%=instituicao[0].endereco %></li>
+                        <li><i class="bi bi-question-circle"></i>Site oficial:
+                          <% if(instituicao[0].site_oficial != "nenhum") { %>
+                            <a href="<%=instituicao[0].site_oficial %>"><%=instituicao[0].site_oficial %></a> 
+                          <% } else {%>
+                            <a href="#"></a>
+                          <% } %>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-4 order-1 order-lg-2 text-center">
+                      <img src="../assets/img/features-6.svg" alt="" class="img-fluid">
+                    </div>
+                  </div>
+            </div>
+          </div><!-- End Tab Content 4 -->
+
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+
+   <!-- ======= Footer ======= -->
+   <footer id="footer" class="footer">
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Longoka</span></strong>. Todos os direitos reservados.
+          </div>
+          <div class="credits"> 
+            Concebido por <a href="https://bootstrapmade.com/">Longoka</a>
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="#" class="twitter"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-telegram"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bi bi-envelope"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div> 
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
