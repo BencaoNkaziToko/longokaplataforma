@@ -46,7 +46,7 @@
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       <a href="#" class="align-items-center">
-        <img src="assets/img/10superior.png" class="img-fluid" alt="" width="100px">
+        <img src="assets/img/10superior.png" class="img-fluid" alt="" width="150px">
       </a>
 
       <nav id="navbar" class="navbar">
@@ -55,7 +55,7 @@
           <li class=""><a href="/pesquisa"><span>Pesquisar</span> <i class="bi bi-home "></i></a></li>
           <li><a class="nav-link scrollto" href="/orientacao">Orientação Vocacional</a></li>
           <li><a class="nav-link scrollto" href="/livros" style="color: rgba(104, 73, 229, 0.905);font-weight: bold;">Biblioteca</a></li>
-          <li><a class="nav-link scrollto"  href="https://drive.google.com/file/d/1igdn-Xn4YGIWLMcs4IBDJh5n6jOAFxCO/view?usp=sharing">Estatudo Legal</a></li>
+          <li><a class="nav-link scrollto"  href="uploads/Estatutos/Regime-Jurídico-mesclado.pdf" download="Regime-Jurídico-Legal-ISP.pdf">Estatuto Legal</a></li>
          
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
@@ -83,8 +83,6 @@
 
           <div class="col-lg-7">
             <h3 class="pt-0 pt-lg-5"></h3>
-
-            <!-- Tabs -->
             <ul class="nav nav-pills mb-3">
               <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1"> Arte e Humanidades</a></li>
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Ciências Aplicadas</a></li>
@@ -92,21 +90,18 @@
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab4">Ciências Exactas</a></li>
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab5">Ciências Naturais</a></li>
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab6">Ciências Sociais e Humanas</a></li>
-              
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab8">Tecnologia e Ciência da Informação</a></li>
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab9">Teses e Disertações</a></li>
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab10">Referências e Documentação</a></li>
             </ul>
-            
             <div class="tab-content">
-
               <div class="tab-pane fade show active" id="tab1">
                 <section id="services" class="services" style="max-height: 400px; overflow: auto">
                   <div class="container" data-aos="fade-up">            
                     <div class="row gy-5">
                         <% livros.forEach(function(livro) { %>
                             <% if(livro.nome == "Arte e Humanidades") { %>
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
                                 <div class="img">
                                     <img src="assets/img/icons8_PDF_99px.png" class="img-fluid" alt="">
@@ -139,7 +134,7 @@
                     <div class="row gy-5">
                         <% livros.forEach(function(livro) { %>
                             <% if(livro.nome == "Ciências Aplicadas") { %>
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
                                 <div class="img">
                                     <img src="assets/img/icons8_PDF_99px.png" class="img-fluid" alt="">
@@ -170,7 +165,7 @@
                     <div class="row gy-5">
                         <% livros.forEach(function(livro) { %>
                             <% if(livro.nome == "Ciências da Saúde") { %>
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
                                 <div class="img">
                                     <img src="assets/img/icons8_PDF_99px.png" class="img-fluid" alt="">
@@ -200,7 +195,7 @@
                     <div class="row gy-5">
                         <% livros.forEach(function(livro) { %>
                             <% if(livro.nome == "Ciências Exactas") { %>
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
                                 <div class="img">
                                     <img src="assets/img/icons8_PDF_99px.png" class="img-fluid" alt="">
@@ -230,7 +225,7 @@
                     <div class="row gy-5">
                         <% livros.forEach(function(livro) { %>
                             <% if(livro.nome == "Ciências Naturais") { %>
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
                                 <div class="img">
                                     <img src="assets/img/icons8_PDF_99px.png" class="img-fluid" alt="">
@@ -260,7 +255,7 @@
                     <div class="row gy-5">
                         <% livros.forEach(function(livro) { %>
                             <% if(livro.nome == "Ciências Sociais e Humanas") { %>
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
                                 <div class="img">
                                     <img src="assets/img/icons8_PDF_99px.png" class="img-fluid" alt="">
@@ -291,7 +286,7 @@
                     <div class="row gy-5">
                         <% livros.forEach(function(livro) { %>
                             <% if(livro.nome == "Tecnologia e Ciência da Informação") { %>
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
                                 <div class="img">
                                     <img src="assets/img/icons8_PDF_99px.png" class="img-fluid" alt="">
@@ -321,7 +316,7 @@
                     <div class="row gy-5">
                         <% livros.forEach(function(livro) { %>
                             <% if(livro.nome == "Teses e Disertações") { %>
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
                                 <div class="img">
                                     <img src="assets/img/icons8_PDF_99px.png" class="img-fluid" alt="">
@@ -351,7 +346,7 @@
                     <div class="row gy-5">
                         <% livros.forEach(function(livro) { %>
                             <% if(livro.nome == "Referências e Documentação") { %>
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
                                 <div class="img">
                                     <img src="assets/img/icons8_PDF_99px.png" class="img-fluid" alt="">
