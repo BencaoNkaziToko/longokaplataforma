@@ -21,52 +21,19 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
-            padding-top: 60px; /* Espaço para o navbar fixo */
             background-image: url('assets/img/Vetor-1-1.png');
             background-repeat: no-repeat;
-            background-size: auto;
             background-position: absolute;
         }
 
-        /* Navbar fixa no topo */
-        nav {
-            position: fixed;
+        .fundo {
+            position: absolute;
             top: 0;
             left: 0;
+            height: 100%;
             width: 100%;
-            background-color: #ffffff;
-            padding: 5px;
-            box-shadow: 0 4px 6px rgba(255, 254, 255, 0.1);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        nav img {
-            height: 40px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: rgb(123, 122, 125);
-            text-decoration: none;
-            font-size: 16px;
-            padding: 10px;
-        }
-
-        nav ul li a:hover {
-            color: #8066e9;
+            background-color: rgba(0, 0, 0, 0.1);
+            z-index: -1;
         }
 
         /* Estilo para o container */
@@ -74,10 +41,9 @@
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             width: 80%;
             max-width: 500px;
-            margin-top: 80px; /* Aumento para garantir que o conteúdo não sobreponha o navbar */
             text-align: center;
         }
 
@@ -111,7 +77,7 @@
         .radio-group {
             display: inline-flex;
             align-items: center;
-            margin: 10px 0;
+            margin: 10px 0 5px 0;
         }
 
         input[type="radio"] {
@@ -131,36 +97,41 @@
         #question-text {
             font-size: 20px;
             margin-bottom: 20px;
+            text-align: center;
+        }
+        .btn{
+            background: #8167e9;
+            padding: 10px 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: none;
+        }
+        .title{
+            color: #8167e9;
+        }
+        .btn a{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <!-- Navbar com logo e links -->
-    <nav>
-        <img src="assets/img/10superior.png" alt="Logotipo"> <!-- Substitua com seu logotipo -->
-        <ul>
-            <li class=""><a href="/mukalassi_ensino_superior"><span>Inicio</span></a>
-            <li class=""><a href="/pesquisa"><span>Pesquisar</span></a></li>
-            <li><a class="" href="/orientacao" style="color: rgba(104, 73, 229, 0.905);font-weight: bold;">Orientação Vocacional</a></li>
-            <li><a class="" href="/livros">Biblioteca</a></li>
-            <li><a class="nav-link scrollto"  href="uploads/Estatutos/Regime-Jurídico-mesclado.pdf" download="Regime-Jurídico-Legal-ISP.pdf">Estatudo Legal</a></li>
-         
-        </ul>
-    </nav>
-
+    <div class="fundo"></div>
     <div class="container">
-        <h1>Teste Vocacional</h1>
+        <h1 class="title">Teste Vocacional</h1>
         <div id="question-section">
             <p id="question-text">Carregando pergunta...</p>
             <div id="answers"></div>
-            <a href="/">Cancelar</a>
+            <button class="btn"><a href="/">Cancelar</a></button>
         </div>
 
         <div id="result-section">
             <h2>Resultados</h2>
             <p id="recommendation"></p>
             <ul id="course-list"></ul>
-            <a href="">Repetir Teste</a>
+            <button class="btn"><a href="/">Terminar</a></button>
         </div>
     </div>
 
